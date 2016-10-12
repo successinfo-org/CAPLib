@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+    defaultConfig {
+        applicationId "com.demo.caplib"
+        minSdkVersion 17
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:multidex:1.0.1'
+
+    compile 'deps:commons-io:2.4'
+    compile 'deps:commons-codec:1.10'
+    compile 'deps:commons-lang:2.6.0'
+    compile 'deps:asmack:1.0.0'
+    compile 'deps:gifview:1.0.0'
+    compile 'deps:xutils:2.3.9'
+    compile 'deps:tencent.libammsdk:1.1'
+    compile 'deps:android-beacon-library:2.5.1'
+    compile 'deps:android-support-v4:1.1.0'
+    compile 'cap:caplib:2.0.9@aar'
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
